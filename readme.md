@@ -95,30 +95,17 @@ Make sure you created an empty .accdb file in Microsoft Access before running th
 Close Microsoft Access before running the script.
 
 ### "ODBC driver not found" error
-Install the Microsoft Access Database Engine:
-- Download from: https://www.microsoft.com/en-us/download/details.aspx?id=54920
-- Install the version matching your Python (32-bit or 64-bit)
+This script requires the Microsoft Access Database Engine ODBC driver to be installed on your system.
+
+**Required component:**
+- Microsoft Access Database Engine Redistributable (corresponding to your Access version)
+- Must match your Python architecture (32-bit or 64-bit)
+
+**Note:** Microsoft Access Database Engine is a separate component provided by Microsoft under their own license terms. This tool requires but does not include or distribute this component.
 
 ## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-MIT License
-
-Copyright (c) 2026
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+## Development
+Developed with AI assistance (Claude Sonnet 4.5 by Anthropic).
+Human oversight and testing were applied throughout.
