@@ -2,6 +2,7 @@ import re
 import sys
 from pathlib import Path
 from typing import Dict, List, Tuple, Iterable
+import os
 
 import pandas as pd
 
@@ -196,6 +197,10 @@ def make_unique_table_name(desired: str, used: set) -> str:
 
 
 def main():
+    # Make relative paths behave when started via double-click / shortcut
+    if getattr(sys, "frozen", False):
+        os.chdir(Path(sys.executable).resolve().parent)
+
     if len(sys.argv) < 3:
         print("Usage: python DataImportToAccess.py <input.xlsx> <output.accdb>")
         print("\nExample:")
@@ -204,8 +209,8 @@ def main():
         print("      Create an empty .accdb file in Microsoft Access first.")
         sys.exit(1)
 
-    excel_path = Path(sys.argv[1])
-    access_path = Path(sys.argv[2])
+    excel_path = Path(sys.argv[1]).expanduser().resolve()
+    access_path = Path(sys.argv[2]).expanduser().resolve()
 
     if not excel_path.exists():
         print(f"Error: Excel file not found: {excel_path}")

@@ -51,8 +51,16 @@ Before running the script, you must create an empty Access database:
 
 ### Step 2: Run the import script
 
+You can run the script using Python:
+
 ```bash
 python DataImportToAccess.py <input.xlsx> <output.accdb>
+```
+
+Or, if you are using the compiled version (`excel-to-access.exe`):
+
+```bash
+excel-to-access.exe <input.xlsx> <output.accdb>
 ```
 
 Example:
